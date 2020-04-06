@@ -1,5 +1,6 @@
 import Weather from "./models/weather.js";
 import Todo from "./models/todo.js";
+import Image from "./models/image.js";
 
 let _state = {
   /**@type {Weather} */
@@ -7,7 +8,10 @@ let _state = {
   
   /**@type {Todo}*/
   // @ts-ignore
-  todos: []
+  todos: [],
+  /**@type {Image} */
+  // @ts-ignore
+  image: []
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -15,7 +19,8 @@ let _state = {
  */
 let _listeners = {
   weather: [],
-  todos: []
+  todos: [],
+  image: []
 };
 
 /**

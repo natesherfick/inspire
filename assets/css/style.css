@@ -2,3 +2,8 @@
   color: red;
   font-size: 2em;
 }
+
+.background{
+  background-size: cover;
+  background-repeat: no-repeat;
+}

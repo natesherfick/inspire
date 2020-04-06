@@ -6,8 +6,14 @@ function _drawTodos() {
 let todos = store.State.todos
 let template = ''
 
+// @ts-ignore
 todos.forEach(task => {template += task.Template})
 document.getElementById('todos').innerHTML = template
+
+// @ts-ignore
+let count = store.State.todos.length;
+console.log("how many tasks?", count)
+document.getElementById('count').innerText = count
 }
 
 export default class TodoController {
