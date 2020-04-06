@@ -6,8 +6,12 @@ import store from "../store.js";
 //      (you may wish to set it as a background image)
 
 function drawImage(){
-let background = store.State.image.url
-document.getElementById("bg-image").style.backgroundImage = `url${background}`
+  console.log("IMAGE CHANGED");
+  
+let background = store.State.image.large_url
+console.log(background);
+
+document.getElementById("bg-image").style.backgroundImage = `url(${background})`
 }
 
 
