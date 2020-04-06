@@ -11,7 +11,8 @@ let _state = {
   todos: [],
   /**@type {Image} */
   // @ts-ignore
-  image: []
+  image: [],
+  quote: {}
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -20,7 +21,8 @@ let _state = {
 let _listeners = {
   weather: [],
   todos: [],
-  image: []
+  image: [],
+  quote: []
 };
 
 /**

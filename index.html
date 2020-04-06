@@ -10,19 +10,18 @@
 </head>
 
 <body class="background" id="bg-image">
-	<div id="weather">
-		Your Weather Template
+	<div>
+Weather: <span id="weather"></span>
 	</div>
-
-	<div id="quote">
-		The Quote
+<br>
+	<div>
+Someone Drunk Once Said: <span id="quote"></span>
 	</div>
 
 	<div>
-		A Todo List
 		<div class="col-4 border border-warning rounded shadow">
              <h5 class="">Tasks: <span id="count"></span></h5>
-        <form onsubmit="app.todoController.addTodo(event)">
+        <form class="" onsubmit="app.todoController.addTodo(event)">
           <div class="form-group">
             <input type="text" name="description" class="form-control" placeholder="Add a task here" aria-describedby="helpId">
           </div>
