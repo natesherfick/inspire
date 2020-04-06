@@ -41,14 +41,21 @@ class TodoService {
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
-    if(todo.completed == false){
-      todo.complete = true
+    if (todo) {
+      
+      if (todo.completed == false){
+      todo.completed = true
     }
-    if(todo.completed == true){
+    else{
       todo.completed = false
-    }
+    }}
+console.log(todo.completed)
 
-    todoApi.put(todoId, todo);
+    todoApi.put(todoId, todo)
+    .then(res => {
+      console.log("toggled!")
+      this.getTodos()
+    })
     //TODO do you care about this data? or should you go get something else?
   }
 
