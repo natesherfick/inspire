@@ -10,6 +10,7 @@ function drawQuote() {
   console.log("HERE IT IS", quote);
 
   document.getElementById("quote").innerText = quote
+  document.getElementById("author").innerText = author
   
 
 }

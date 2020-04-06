@@ -8,27 +8,18 @@ this.description = data.description
 }
 
 get Template() {
-if (this.completed == true){
+  let template = 
 
-  return /*html*/`
+/*html*/`
 <div>
-<input type="checkbox" id="check-${this._id}" checked onclick="app.todoController.toggleTodoStatus('${this._id}')">
+<input type="checkbox" id="check-${this._id}" `
+template += this.completed ? 'checked' : '' 
+template += ` onclick="app.todoController.toggleTodoStatus('${this._id}')">
 ${this.description}
 <button type="button" onclick="app.todoController.removeTodo('${this._id}')">remove</button>
 </div>
-`}
-
-else{
-  return /*html*/`
-<div>
-<input type="checkbox" id="check-${this._id}" onclick="app.todoController.toggleTodoStatus('${this._id}')">
-${this.description}
-<button type="button" onclick="app.todoController.removeTodo('${this._id}')">remove</button>
-</div>
-`  
-}
-
-
+`
+return template
 }
 
 
